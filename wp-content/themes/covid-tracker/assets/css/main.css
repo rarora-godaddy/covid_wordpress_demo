@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	width: 98%;
+	margin: 0px auto ;
 }
 
 ol, ul {
@@ -83,7 +85,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252122;
+		background: #ffffff;
 		background-image: url("images/bg02.png");
 	}
 
@@ -2068,7 +2070,7 @@ input, select, textarea {
 		position: relative;
 		background: #ffffff;
 		border-bottom: solid 1px #ccc;
-		padding: 5em 0 4em 0;
+		padding: 2em 0 2em 0;
 		text-align: center;
 	}
 
@@ -2082,7 +2084,7 @@ input, select, textarea {
 
 /* Nav */
 
-#site-navigation > div.menu-top-menu-container > ul > li.current-menu-item > a {
+#nav > div.menu-top-menu-container > ul > li.current-menu-item > a {
 	background: #d52349;
 	color: #fff !important;
 	font-weight: 700;
@@ -2100,21 +2102,21 @@ input, select, textarea {
 		margin: 2.5em 0 0 0;
 	}
 
-		#nav > ul {
+		#nav > div.menu-top-menu-container> ul {
 			margin: 0;
 		}
 
-			#nav > ul > li {
+			#nav > div.menu-top-menu-container > ul > li {
 				display: inline-block;
 				font-style: italic;
 				margin: 0 0.35em 0 0.35em;
 			}
 
-				#nav > ul > li > ul {
+				#nav > div.menu-top-menu-container > ul > li > ul {
 					display: none;
 				}
 
-				#nav > ul > li > a {
+				#nav > div.menu-top-menu-container > ul > li > a {
 					border-radius: 5px;
 					color: #5d5d5d;
 					text-decoration: none;
@@ -2126,11 +2128,11 @@ input, select, textarea {
 					outline: 0;
 				}
 
-				#nav > ul > li:hover > a, #nav > ul > li.active > a {
+				#nav > div.menu-top-menu-container > ul > li:hover > a, #nav > ul > li.active > a {
 					background: #f3f3f3;
 				}
 
-				#nav > ul > li.current > a {
+				#nav > div.menu-top-menu-container > ul > li.current-menu-item > a {
 					background: #d52349;
 					color: #fff !important;
 					font-weight: 700;
@@ -2278,11 +2280,13 @@ input, select, textarea {
 
 /* Main */
 
-	#main {
-		position: relative;
-		background: #f7f7f7 url("images/bg02.png");
-		padding: 4em 0 4em 0;
-	}
+		#main {
+			position: relative;
+			background: #ffffff url(images/bg02.png);
+			padding: 4em 0 4em 0;
+			width: 90%;
+			margin: 0 auto;
+		}
 
 		#main:before {
 			content: '';
@@ -2300,13 +2304,18 @@ input, select, textarea {
 			background: #f7f7f7 url("images/bg02.png");
 		}
 
+		#world-shortcode-container {
+			text-align: center;
+			margin-bottom: 25px;
+		}
 /* Footer */
 
-	#footer {
-		position: relative;
-		color: #858484;
-		padding: 4em 0;
-	}
+		#footer {
+			position: relative;
+			color: #ffffff;
+			padding: 4em 0;
+			background-color: #d52349;
+		}
 
 		#footer:before {
 			content: '';

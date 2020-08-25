@@ -56,14 +56,13 @@ function get_option_values () {
 }
 
 function display_shortcode() {
-
  //   echo "hrere"; exit;
+
+    $country = get_query_var('country');
     $summary_url = "https://api.covid19api.com/summary";
     $resp_json = file_get_contents( $summary_url );
     $resp = json_decode( $resp_json, true );
 
-    
-  
     $world_data = $resp['Global'];
     $country_summery = $resp['Countries'];
 
@@ -103,7 +102,7 @@ function display_shortcode() {
         }
 
         .country-shortcode-div {
-            border: 1px solid grey;
+            border: 0px solid grey;
             width: 90%;
             margin: 0px auto;
         }    
@@ -169,3 +168,4 @@ function display_shortcode() {
     return $html;
 }
 add_shortcode('some_random_code_sc', 'display_shortcode' );
+

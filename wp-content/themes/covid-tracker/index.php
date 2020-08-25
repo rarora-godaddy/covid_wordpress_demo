@@ -56,7 +56,7 @@ get_header();
 							</footer>
 						</section>
 
-				</section>
+				
 
 			<!-- Main -->
 				<section id="main">

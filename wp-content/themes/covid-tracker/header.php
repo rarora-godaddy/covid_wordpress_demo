@@ -44,15 +44,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		<?php if ( is_front_page() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php endif; ?>
 
 		<!-- Nav -->
 		
-		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="">
+		<nav id="nav" class="main-navigation" role="navigation" aria-label="">
 			<?php
 			wp_nav_menu(
 				
 			);
 			?>
 		</nav><!-- #site-navigation -->
+	</section>	

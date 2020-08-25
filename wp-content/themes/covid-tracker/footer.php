@@ -23,7 +23,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 			<section id="footer">
 					<div class="container">
 						<div class="row">
-							<div class="col-8 col-12-medium">
+						<!--	<div class="col-8 col-12-medium">
 								<section>
 									<header>
 										<h2>Blandit nisl adipiscing</h2>
@@ -136,20 +136,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 										</li>
 									</ul>
 								</section>
-							</div>
-							<div class="col-12">
+							</div>-->
+							<div class="col-12"> 
 
 								<!-- Copyright -->
 									<div id="copyright">
 										<ul class="links">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											<li>&copy; covid-tracker.com . All rights reserved.</li>
 										</ul>
 									</div>
 
 							</div>
 						</div>
 					</div>
-				</section>
+			</section>
 
 		</div>
 
