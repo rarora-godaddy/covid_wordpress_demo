@@ -59,6 +59,83 @@ function display_shortcode() {
  //   echo "hrere"; exit;
 
     $country = get_query_var('country');
+
+
+    if($country) 
+    {
+        $summary_url = "https://api.covid19api.com/live/country/".$country;
+        $resp_json = file_get_contents( $summary_url );
+        $resp = json_decode( $resp_json, true );
+
+        $country_data = end($resp) ;
+    //    print_r(end($resp));
+
+        $html = '<style>
+        .ocvb-shortcode-headline {
+            font-size: 35px;
+            font-family: inherit;
+            line-height: 61px;
+
+        }
+        .ocvb-shortcode-country {
+            font-size: 35px;
+            line-height: 61px;
+            color: #ea3838;
+            font-weight: bold;
+        }
+        .ocvb-shortcode-stats-label {
+            font-size: 31px;
+            font-family: inherit;
+            line-height: 40px;
+        }
+        .ocvb-shortcode-stats-value {
+            font-size: 31px;
+            line-height: 40px;
+            color: #ea3838;
+            font-weight: bold;
+
+        }
+        .ocvb-shortcode-stats-recovered-value {
+            font-size: 31px;
+            line-height: 40px;
+            color: green;
+            font-weight: bold;
+
+        }
+
+        .country-shortcode-div {
+            border: 0px solid grey;
+            width: 90%;
+            margin: 0px auto;
+        }    
+
+    </style>
+    <div id="world-shortcode-container">
+        <div class="grid-y align-middle ocvb-shortcode">
+            <div class="cell small-2">
+                <div class="ocvb-shortcode-headline">Coronavirus Cases - '.$country.' </div>
+                <div class="ocvb-shortcode-country">'.$country_data['Confirmed'].'</div>
+            </div>
+            <div class="ocvb-shortcode-stats cell small-9">
+                <div class="ocvb-shortcode-stats-recovered grid-x grid-padding-y">
+                    <div class="ocvb-shortcode-stats-label cell small-7">Recovered cases</div>
+                    <div class="ocvb-shortcode-stats-recovered-value cell small-5">'.$country_data['Recovered'].'</div>
+                </div>
+                <div class="ocvb-shortcode-stats-deaths grid-x grid-padding-y">
+                    <div class="ocvb-shortcode-stats-label cell small-7">Death cases</div>
+                    <div class="ocvb-shortcode-stats-value cell small-5">'.$country_data['Deaths'].'</div>
+                </div>
+            </div>
+        </div>
+    </div>';
+
+
+    return $html;
+
+        exit;
+
+    }
+
     $summary_url = "https://api.covid19api.com/summary";
     $resp_json = file_get_contents( $summary_url );
     $resp = json_decode( $resp_json, true );
@@ -145,7 +222,7 @@ function display_shortcode() {
     foreach ($country_summery as  $each_country)  
     { 
         $html .= '<tr>
-                    <td> '.$each_country['Country'].' </td>
+                    <td> <a href="/country/'.$each_country['Country'].'/" >'.$each_country['Country'].' </a></td>
                     <td> '.$each_country['TotalConfirmed'].' </td>
                     <td> '.$each_country['NewConfirmed'].' </td>
                     <td> '.$each_country['TotalRecovered'].' </td>
