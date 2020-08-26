@@ -1,0 +1,36 @@
+.ocvb-shortcode-headline {
+    font-size: 35px;
+    font-family: inherit;
+    line-height: 61px;
+}
+.ocvb-shortcode-country {
+    font-size: 35px;
+    line-height: 61px;
+    color: #ea3838;
+    font-weight: bold;
+}
+.ocvb-shortcode-stats-label {
+    font-size: 31px;
+    font-family: inherit;
+    line-height: 40px;
+}
+.ocvb-shortcode-stats-value {
+    font-size: 31px;
+    line-height: 40px;
+    color: #ea3838;
+    font-weight: bold;
+
+}
+.ocvb-shortcode-stats-recovered-value {
+    font-size: 31px;
+    line-height: 40px;
+    color: green;
+    font-weight: bold;
+
+}
+
+.country-shortcode-div {
+    border: 0px solid grey;
+    width: 90%;
+    margin: 0px auto;
+}    
