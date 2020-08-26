@@ -86,5 +86,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
 
+// added this code so that it will not break if we change the server.
+define( 'WP_HOME', '//'.$_SERVER['SERVER_NAME']);
+define( 'WP_SITEURL', '//'.$_SERVER['SERVER_NAME']);
+
+
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
